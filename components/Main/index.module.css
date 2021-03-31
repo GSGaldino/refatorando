@@ -1,0 +1,52 @@
+.main {
+  background: url('/background.jpg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+  padding-top: 100px;
+  margin-top: -70px;
+}
+
+.flexSection {
+  display: flex;
+  justify-content: center;
+  color: #f1f1f1;
+  align-items: center;
+}
+
+.flexSection h1 {
+  color: #f1f1f1;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.flexSection span {
+  color: var(--primary-color);
+}
+
+.flexItem img {
+  margin-left: -160px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -148px;
+}
+
+.glass {
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  border-radius: var(--border-radius);
+}
+
+.title {
+  padding: 40px 60px;
+  text-align: center;
+  width: 700px;
+  margin: 40px auto 100px auto;
+  border: 1px solid var(--primary-color);
+}
+
+.title p {
+  margin: 10px;
+}

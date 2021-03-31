@@ -1,0 +1,14 @@
+:root {
+  --border-radius: 4px;
+  --primary-color: #44AEB5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
