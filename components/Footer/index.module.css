@@ -1,0 +1,18 @@
+.footer {
+  background: #010008;
+  padding: 40px 0px;
+}
+
+.flexSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexSection .flexItem ul {
+  list-style: none;
+  color: #f1f1f1;
+}
+
+.flexSection .flexItem ul li {
+  margin: 10px auto;
+}
