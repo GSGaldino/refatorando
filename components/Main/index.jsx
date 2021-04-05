@@ -15,10 +15,7 @@ export default function Main() {
           <div className={styles.flexItem}>
             <Tilt
               options={{ max: 25, reset: true }}
-              style={{
-                background: 'rgba(0, 0, 0, .15)',
-                backdropFilter: 'blur(30px)'
-              }}
+              className={styles.tilt}
             >
               <div className={`${styles.glass} ${styles.title}`}>
                 <h1>Entre para a <span>era digital</span></h1>
