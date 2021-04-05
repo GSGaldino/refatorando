@@ -15,4 +15,22 @@
 
 .flexSection .flexItem ul li {
   margin: 10px auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flexSection .flexItem ul li p {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 767px){
+  .flexSection {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .flexSection .flexItem {
+    margin: 20px auto;
+  }
 }

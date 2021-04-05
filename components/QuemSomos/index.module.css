@@ -49,3 +49,19 @@
 .flexSection .flexItem:last-child {
   width: 40%;
 }
+
+@media screen and (max-width: 767px){
+  .flexSection {
+    flex-direction: column-reverse;
+    padding: 10px;
+  }
+
+  .flexSection .flexItem:first-child {
+    width: 100%;
+  }
+
+  .flexSection .flexItem:last-child {
+    width: 60%;
+    margin: 40px auto;
+  }
+}

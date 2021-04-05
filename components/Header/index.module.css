@@ -1,3 +1,15 @@
 .headerContainer {
   padding: 12px;
 }
+
+@media screen and (max-width: 767px){
+  .headerContainer {
+    padding: 16px 0px 0px 0px;
+  }
+
+  .headerContainer .header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+}

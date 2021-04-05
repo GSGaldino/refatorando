@@ -26,7 +26,7 @@ export default function QuemSomos() {
                   type="email"
                   placeholder="E-mail"
                 />
-                <InputRightElement width="200px">
+                <InputRightElement width="34%">
                   <Button
                     size="lg"
                     variant="solid"

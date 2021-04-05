@@ -45,3 +45,16 @@
   border-radius: var(--border-radius);
   backdrop-filter: blur(30px);
 }
+
+@media screen and (max-width: 767px){
+  .flexSection {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .glass {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+}
