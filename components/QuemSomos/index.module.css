@@ -19,6 +19,8 @@
 
 .flexSection.glass {
   position: relative;
+  border: .5px solid var(--primary-color);
+  border-radius: 4px;
 }
 
 .flexSection.glass:before {
@@ -43,11 +45,14 @@
 }
 
 .flexSection .flexItem:first-child {
-  width: 60%;
+  width: 64%;
 }
 
 .flexSection .flexItem:last-child {
-  width: 40%;
+  width: 36%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 767px){

@@ -4,11 +4,13 @@
 }
 
 .flexSection .flexItem {
-  padding: 20px 40px;
+  padding: 20px 40px 0px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 10px auto;
+  align-items: center;
+  text-align: center;
+  margin: 20px auto;
 }
 
 .flexSection .flexItem p {
@@ -24,6 +26,8 @@
 .glass {
   position: relative;
   width: 32%;
+  border: .5px solid var(--primary-color);
+  border-radius: 4px;
 }
 
 .glass img,

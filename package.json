@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "react-icons": "^4.2.0",
-    "react-tilt": "^0.1.4"
+    "react-tilt": "^0.1.4",
+    "react-typical": "^0.1.3"
   }
 }

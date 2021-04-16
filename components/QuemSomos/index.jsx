@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {
   InputGroup,
   InputRightElement,
@@ -9,8 +11,37 @@ import Provider from '../Provider';
 import styles from './index.module.css';
 
 export default function QuemSomos() {
+  const inputRef = React.useRef();
+  const [formResult, setFormResult] = React.useState({
+    success: false,
+    failed: false
+  });
+
+  const handleSubmit = async event => {
+    if(inputRef.current.value.length <= 1)
+      return alert('Por favor insira alguma forma de contato! =)')
+
+    let url = 'https://api.sheety.co/5095dd603a1271ee4cbd4c0455ded7af/refatorandoNovoLead/novos';
+    let body = {
+      novo: {
+        "carimboDeData/hora": new Date(Date.now()).toString(),
+        "eMailOuTelefone": inputRef.current.value,
+      }
+    }
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    })
+    .then(response => response.json())
+    .then(json => console.log(json))
+
+  }
+
   return (
-    <div className={styles.quemSomos}>
+    <div className={styles.quemSomos} id="form">
       <Provider>
         <div className={`${styles.flexSection} ${styles.glass}`}>
           <div className={styles.flexItem}>
@@ -20,14 +51,22 @@ export default function QuemSomos() {
             <p>Tire suas ideias do papel e conquiste seu espaço nessa nova era digital. Aqui, você encontra tecnologia de ponta em sites personalizados e 100% dinâmicos. Não perca mais tempo, deixe seu e-mail e entraremos em contato:</p>
 
             <form>
-              <InputGroup size="lg">
+
+              <InputGroup
+                size="lg"
+                marginTop="40px"
+              >
                 <Input
+                  ref={inputRef}
                   pr="4.5rem"
-                  type="email"
-                  placeholder="E-mail"
+                  type="text"
+                  placeholder="E-mail ou telefone"
+                  name="entry.1016635699"
+                  color="#f1f1f1"
                 />
                 <InputRightElement width="34%">
                   <Button
+                    onClick={handleSubmit}
                     size="lg"
                     variant="solid"
                     colorScheme="blue"
@@ -49,6 +88,6 @@ export default function QuemSomos() {
           </div>
         </div>
       </Provider>
-    </div>
+    </div >
   );
 };

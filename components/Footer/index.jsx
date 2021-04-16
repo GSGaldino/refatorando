@@ -36,7 +36,7 @@ export default function Footer() {
                 <IconContext.Provider value={footerIconStyle}>
                   <FaEnvelope />
                 </IconContext.Provider>
-                <p>refatorand0@outlook.com</p>
+                <p>contato@refatorando.com.br</p>
               </li>
             </ul>
           </div>
