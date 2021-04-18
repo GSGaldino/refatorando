@@ -15,11 +15,11 @@ export default function Advantages() {
           </div>
           <div className={`${styles.flexItem} ${styles.glass}`}>
             <img src="/advantages-2.png" alt="Símbolo cadeado" />
-            <p>Sites responsivos <br />e dinâmicos</p>
+            <p>Responsivo <br />e dinâmicos</p>
           </div>
           <div className={`${styles.flexItem} ${styles.glass}`}>
             <img src="/advantages-3.png" alt="Símbolo cadeado" />
-            <p>Seu site com design moderno e <br />tecnologia de ponta</p>
+            <p>Design moderno e <br />tecnologia de ponta</p>
           </div>
         </div>
       </Provider>
