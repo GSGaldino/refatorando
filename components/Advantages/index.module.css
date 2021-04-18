@@ -48,6 +48,10 @@
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
   border-radius: var(--border-radius);
   backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  -moz-backdrop-filter: blur(30px);
+  -o-backdrop-filter: blur(30px);
+  -ms-backdrop-filter: blur(30px);
 }
 
 @media screen and (max-width: 767px){

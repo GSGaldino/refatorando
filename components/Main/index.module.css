@@ -12,6 +12,7 @@
   justify-content: space-around;
   color: #f1f1f1;
   align-items: center;
+  overflow: hidden;
 }
 
 .flexSection h1 {
@@ -70,10 +71,6 @@
   -o-backdrop-filter: blur(30px);
   -ms-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
-}
-
-.tilt.turned {
-  transform: rotateY(180deg);
 }
 
 @media screen and (max-width: 767px){

@@ -20,7 +20,7 @@ export default function Main() {
 
           <div className={styles.flexItem}>
             <Tilt
-              options={{ max: 15, reset: true }}
+              options={{ max: 10, reset: true, scale: 1 }}
               className={styles.tilt}
             >
               <div

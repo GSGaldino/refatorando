@@ -2,5 +2,9 @@
   background: url('/blured-bg.jpg');
   background-size: cover;
   background-attachment: fixed;
+  -webkit-background-attachment: fixed;
+  -o-background-attachment: fixed;
+  -moz-background-attachment: fixed;
+  -ms-background-attachment: fixed;
   padding-bottom: 20px;
 }
