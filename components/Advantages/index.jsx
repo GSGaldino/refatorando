@@ -15,7 +15,7 @@ export default function Advantages() {
           </div>
           <div className={`${styles.flexItem} ${styles.glass}`}>
             <img src="/advantages-2.png" alt="Símbolo cadeado" />
-            <p>Responsivo <br />e dinâmicos</p>
+            <p>Responsivo <br />e dinâmico</p>
           </div>
           <div className={`${styles.flexItem} ${styles.glass}`}>
             <img src="/advantages-3.png" alt="Símbolo cadeado" />
