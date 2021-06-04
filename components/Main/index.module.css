@@ -5,6 +5,7 @@
   background-size: cover;
   padding-top: 100px;
   margin-top: -60px;
+  padding-left: 10px;
 }
 
 .flexSection {
@@ -28,7 +29,7 @@
 }
 
 .flexItem img {
-  margin-left: -220px;
+  margin-left: -30%;
   position: relative;
   z-index: 2;
   margin-bottom: -198px;
@@ -73,10 +74,10 @@
   backdrop-filter: blur(30px);
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 1200px){
   .main {
     margin: 0px;
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
     padding-top: 60px;
     margin-top: -58px;
     background-position-x: left;
@@ -91,7 +92,10 @@
     height: 100%;
     width: 100%;
     margin-top: -80px;
-    margin-bottom: -10px;
+  }
+
+  .flexItem:last-child {
+    padding: 0px;
   }
 
   .title {

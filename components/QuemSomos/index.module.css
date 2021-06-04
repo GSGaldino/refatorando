@@ -1,6 +1,6 @@
 .flexSection {
   display: flex;
-  padding: 20px 40px;
+  padding: 40px 40px;
   align-items: center;
   margin: 0px 10px 0px 10px;
 }
@@ -15,15 +15,17 @@
 .flexSection p {
   color: #f1f1f1;
   margin: 20px 0px;
+  text-align: justify;
 }
 
-.flexSection.glass {
+.glass {
   position: relative;
   border: .5px solid var(--primary-color);
   border-radius: 4px;
+  padding: 28px 28px 8px 28px;
 }
 
-.flexSection.glass:before {
+.glass:before {
   content: '';
   display: block;
   position: absolute;
@@ -41,22 +43,23 @@
   -ms-backdrop-filter: blur(30px);
 }
 
-.flexSection.glass p,
-.flexSection.glass img,
-.flexSection.glass h3 {
+.glass p,
+.glass img,
+.glass h3 {
   z-index: 1;
   position: relative;
 }
 
 .flexSection .flexItem:first-child {
-  width: 64%;
+  width: 66%;
 }
 
 .flexSection .flexItem:last-child {
-  width: 36%;
+  width: 44%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0px -50px -18px 0px;
 }
 
 .flexSection span {
@@ -76,8 +79,8 @@
   }
 
   .flexSection .flexItem:last-child {
-    width: 60%;
-    margin: 40px auto;
+    width: 100%;
+    margin: 40px auto 20px auto;
   }
 
   .flexSection .flexItem:last-child img{

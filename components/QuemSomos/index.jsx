@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react';
 
 import Provider from '../Provider';
+import emailjs from 'emailjs-com';
 
 import styles from './index.module.css';
 
@@ -24,13 +25,19 @@ export default function QuemSomos() {
     warning: false
   });
 
+  /* On form submit */
   const handleSubmit = async event => {
+
+    /* Prevent for default function */
     event.preventDefault();
+
+    /* Set loading to true */
     setFormResult({
       ...formResult,
       loading: true,
     })
 
+    /* Verify if input have at least 3 numbers and if doesn't, return warning message */
     if (inputRef.current.value.length <= 4) {
       setFormResult({
         ...formResult,
@@ -41,23 +48,16 @@ export default function QuemSomos() {
       return inputRef.current.value = "";
     }
 
-    let url = 'https://api.sheety.co/5095dd603a1271ee4cbd4c0455ded7af/refatorandoNovoLead/novos';
-    let body = {
-      novo: {
-        "carimboDeData/hora": new Date(Date.now()).toString(),
-        "eMailOuTelefone": inputRef.current.value,
-      }
-    }
+    /* Define email Saas template */
+    const templateParams = {
+      email: inputRef.current.value
+    };
 
-    fetch(url, {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(body),
-    })
-      .then(response => response.json())
-      .then(json => {
+    /* Begin fetching the service with provided template */
+    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_USER);
+    emailjs.send('default_service', process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE, templateParams)
+      .then(response => {
+        console.log(response)
         setFormResult({
           ...formResult,
           message: "Muito obrigado pelo interesse! Em breve nossa equipe entrará em contato. =)",
@@ -67,29 +67,30 @@ export default function QuemSomos() {
         })
         return inputRef.current.value = "";
       })
+      .catch(error => console.log(error))
   }
 
   return (
     <div className={styles.quemSomos} id="form">
       <Provider>
-        <div className={`${styles.flexSection} ${styles.glass}`}>
+        <div className={styles.flexSection}>
           <div className={styles.flexItem}>
             <h3>Quem somos?</h3>
-            <p>Somos uma boutique de softwares fundada em outubro de 2020. O que nos motivou? O <span>amor pela tecnologia</span>, claro!</p>
-            <p>Nossa missão é fazer com que a tecnologia alcance <span>todas</span> as empresas, sejam elas de <span>pequeno</span>, <span>médio</span> ou <span>grande</span> porte.</p>
-            <p>Tire suas ideias do papel e conquiste seu espaço nessa nova <span>era digital</span>. Aqui, você encontra tecnologia de ponta em sites personalizados e 100% dinâmicos. Não perca mais tempo, deixe seu e-mail e entraremos em contato:</p>
+            <p>Somos uma boutique de softwares fundada em outubro de 2020. O que nos motivou? O <span>amor pela tecnologia</span>, claro! Nossa missão é fazer com que a tecnologia alcance <span>todas</span> as empresas, sejam elas de <span>pequeno</span>, <span>médio</span> ou <span>grande</span> porte. Tire suas ideias do papel e conquiste seu espaço nessa nova <span>era digital</span>. Aqui, você encontra tecnologia de ponta em sites personalizados e 100% dinâmicos. Não perca mais tempo, deixe seu e-mail e entraremos em contato:</p>
 
             <form
               onSubmit={handleSubmit}
+              className={styles.glass}
             >
 
               <InputGroup
                 size="lg"
-                marginTop="40px"
+                marginTop="0px"
+                marginBottom="20px"
               >
                 <Input
                   ref={inputRef}
-                  onChange={e => setFormResult({...formResult, success: false, warning: false})}
+                  onChange={e => setFormResult({ ...formResult, success: false, warning: false })}
                   pr="4.5rem"
                   type="text"
                   placeholder="E-mail ou telefone"

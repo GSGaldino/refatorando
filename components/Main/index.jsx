@@ -4,6 +4,7 @@ import { Button } from '@chakra-ui/react';
 
 import Provider from '../Provider';
 
+import animate from '../../styles/vivify.min.module.css';
 import styles from './index.module.css';
 
 export default function Main() {
@@ -18,7 +19,7 @@ export default function Main() {
       <Provider>
         <div className={styles.flexSection}>
 
-          <div className={styles.flexItem}>
+          <div className={`${styles.flexItem}`}>
             <Tilt
               options={{ max: 10, reset: true, scale: 1 }}
               className={styles.tilt}
@@ -50,7 +51,7 @@ export default function Main() {
             </Tilt>
           </div>
 
-          <div className={styles.flexItem}>
+          <div className={`${styles.flexItem} ${animate.vivify} ${animate.driveInRight}`}>
             <img src="/tech-man.png" alt="Desenho de rapaz interagindo com equipamentos tecnológicos." />
           </div>
         </div>
