@@ -1,6 +1,6 @@
 .flexSection {
   display: flex;
-  padding: 40px 40px;
+  padding: 40px 10px;
   align-items: center;
   margin: 0px 10px 0px 10px;
 }
@@ -59,7 +59,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0px -50px -18px 0px;
+  margin: 0px 0px -18px 0px;
 }
 
 .flexSection span {
