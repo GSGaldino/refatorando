@@ -12,7 +12,7 @@ export default function Main() {
 
   const handleClick = event => {
     setIsTiltTurned(!isTiltTurned);
-  }
+  };
 
   return (
     <main className={styles.main}>
@@ -29,7 +29,7 @@ export default function Main() {
               >
                 <h1>Entre para a <span>era digital</span></h1>
                 <p>Seu projeto com <span>visibilidade</span> e <span>destaque</span></p>
-                <p>Não fique fora dessa: faça já o seu orçamento sem compromisso e <span>tire suas ideias do papel</span> com a Ref@t!</p>
+                <p>Não fique fora dessa: faça já o seu orçamento sem compromisso e <span>tire suas ideias do papel</span> com a <span><strong>Refatorando</strong></span>!</p>
                 <p>Inscreva-se e entraremos em contato:</p>
 
                 <a href="#form">

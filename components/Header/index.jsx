@@ -8,6 +8,9 @@ export default function Header() {
       <Provider>
         <div className={styles.header}>
 
+          {/* SEO */}
+          <h1 style={{visibility: "hidden", display: "none"}}>Refatorando</h1>
+
           <img src="/logo.svg" alt="Refatorando" />
 
         </div>

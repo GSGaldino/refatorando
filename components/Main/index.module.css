@@ -28,6 +28,12 @@
   font-weight: 600;
 }
 
+.flexSection h1 span {
+  background: -webkit-linear-gradient(var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .flexItem img {
   margin-left: -30%;
   position: relative;
