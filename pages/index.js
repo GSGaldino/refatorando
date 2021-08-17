@@ -31,36 +31,24 @@ export default function Home() {
         <meta name="twitter:creator" content="@" />
         <meta name="twitter:description" content="Onde as idéias saem do papel!" />
           
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PG6P2WDF61"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-PG6P2WDF61');`
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                    })(window,document,'script','dataLayer','GTM-TRS6LQW');`
-          }}
-        />
+        {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=G-PG6P2WDF61`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-PG6P2WDF61', {
+                page_path: window.location.pathname,
+              });
+            `,
+            }}
+          />
       </Head>
-
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-TRS6LQW"
-          height="0"
-          width="0"
-          style={{
-            display: 'none',
-            visibility: 'hidden'
-          }}
-        />
-      </noscript>
 
       <Header />
       <Main />
