@@ -30,6 +30,15 @@ export default function Home() {
         <meta name="twitter:title" content="Refatorando" />
         <meta name="twitter:creator" content="@" />
         <meta name="twitter:description" content="Onde as idéias saem do papel!" />
+          
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PG6P2WDF61"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: ` window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-PG6P2WDF61');`
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
