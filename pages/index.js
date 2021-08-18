@@ -47,9 +47,8 @@ export default function Home() {
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
     
               ga('create', 'UA-204838861-1', 'auto');
-              ga('send', 'pageview', {
-                'dimension1': 'gabriel.galdino@code7.com'
-              });
+              ga('send', 'pageview');
+              ga('set', 'dimension1', 'gabriel.galdino@code7.com');
             `,
             }}
           />
