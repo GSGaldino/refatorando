@@ -34,7 +34,7 @@ export default function Home() {
         {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
-            src={`https://www.googletagmanager.com/gtag/js?id=G-PG6P2WDF61`}
+            src={`https://www.googletagmanager.com/gtag/js?id=G-1LYN60GBK9`}
           />
           <script
             dangerouslySetInnerHTML={{
@@ -42,7 +42,7 @@ export default function Home() {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-PG6P2WDF61', {
+              gtag('config', 'G-1LYN60GBK9', {
                 page_path: window.location.pathname,
               });
             `,
