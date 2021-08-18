@@ -44,8 +44,11 @@ export default function Home() {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'UA-204838861-1');
+            gtag('config', 'UA-204838861-1', {
+              'custom_map': {'dimension1': 'emailResponsible'}
+            });
             gtag('set', 'dimension1', 'gabriel.galdino@code7.com');
+            gtag('event', 'email_dimension', {'emailResponsible': 'gabriel.galdino@code7.com'})
             `,
             }}
           />
