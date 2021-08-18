@@ -35,7 +35,7 @@ export default function Home() {
           <script
             async
             data-cfasync="false"
-            src={`https://www.googletagmanager.com/gtag/js?id=UA-204838861-1`}
+            src={`https://www.googletagmanager.com/gtag/js?id=G-1LYN60GBK9`}
           />
           <script
             dangerouslySetInnerHTML={{
@@ -44,7 +44,7 @@ export default function Home() {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'UA-204838861-1', {
+            gtag('config', 'G-1LYN60GBK9', {
               'custom_map': {'dimension1': 'emailResponsible'}
             });
             gtag('set', 'dimension1', 'gabriel.galdino@code7.com');
@@ -60,7 +60,7 @@ export default function Home() {
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','UA-204838861-1');
+              })(window,document,'script','dataLayer','G-1LYN60GBK9');
               `
             }}
           />
