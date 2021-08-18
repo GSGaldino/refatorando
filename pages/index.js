@@ -45,6 +45,7 @@ export default function Home() {
             gtag('js', new Date());
 
             gtag('config', 'UA-204838861-1');
+            gtag('set', 'dimension1', 'gabriel.galdino@code7.com');
             `,
             }}
           />
