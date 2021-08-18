@@ -34,7 +34,7 @@ export default function Home() {
         {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
-            src={`https://www.googletagmanager.com/gtag/js?id=G-1LYN60GBK9`}
+            src={`https://www.googletagmanager.com/gtag/js?id=UA-204838861-1`}
           />
           <script
             dangerouslySetInnerHTML={{
@@ -42,9 +42,10 @@ export default function Home() {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-1LYN60GBK9', {
+              gtag('config', 'UA-204838861-1', {
                 page_path: window.location.pathname,
               });
+              gtag('set', 'dimension1', 'desenvolvedorgabs@gmail.com');
             `,
             }}
           />
